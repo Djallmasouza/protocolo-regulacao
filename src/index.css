@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif", serif;
+  --font-sans: "Manrope", sans-serif;
+
+  --color-background: #12121d;
+  --color-surface: #1f1f29;
+  --color-surface-low: #1b1b25;
+  --color-surface-high: #292934;
+  --color-surface-highest: #34343f;
+  
+  --color-primary: #dfb7ff;
+  --color-primary-container: #6b21a8;
+  --color-on-primary: #4a007f;
+  --color-on-primary-container: #d7a8ff;
+  
+  --color-secondary: #c6c4da;
+  --color-secondary-container: #464557;
+  
+  --color-tertiary: #e9c349;
+  --color-tertiary-container: #cca72f;
+  --color-on-tertiary: #3c2f00;
+
+  --color-on-surface: #e4e1f0;
+  --color-on-surface-variant: #cfc2d4;
+  
+  --color-outline: #988d9e;
+  --color-outline-variant: #4c4452;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-sans antialiased selection:bg-primary-container/30;
+  }
+  
+  h1, h2, h3, h4, .font-serif {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply backdrop-blur-2xl bg-on-surface/5 border border-on-surface/10;
+  }
+}
