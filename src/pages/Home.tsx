@@ -71,9 +71,8 @@ export default function Home({ progress, onStartRitual }: HomeProps) {
                 {activeModal === 'registros' ? (
                   <p>Aqui você verá o histórico de todas as sombras que documentou durante sua jornada de autoconhecimento.</p>
                 ) : (
-                  <p>Reflexão: Sua regulação somática está evoluindo. Continue ouvindo o que seu corpo tem a dizer.</p>
+                  <p>Sua regulação somática está evoluindo. Continue ouvindo o que seu corpo tem a dizer.</p>
                 )}
-                <p className="text-sm italic">Em breve: Funcionalidades avançadas de análise e exportação.</p>
               </div>
               <button 
                 onClick={() => setActiveModal(null)}

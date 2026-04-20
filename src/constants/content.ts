@@ -4,7 +4,7 @@ export const RITUALS: Ritual[] = [
   {
     day: 1,
     name: 'Escaneamento do Corpo',
-    objective: 'Identifique onde a tensão vive hoje em você.',
+    objective: 'Escute o que seu corpo está guardando',
     steps: [
       'Feche os olhos e respire fundo três vezes, sentindo o ar entrar e sair.',
       'Lentamente, percorra mentalmente dos pés à cabeça, notando áreas de aperto.',
@@ -17,7 +17,7 @@ export const RITUALS: Ritual[] = [
   {
     day: 2,
     name: 'A Voz Silenciada',
-    objective: 'O que você engoliu que ainda ecoa internamente.',
+    objective: 'Nomeie o que você engoliu em silêncio',
     steps: [
       'Sente-se com a coluna ereta e coloque as mãos no pescoço ou garganta.',
       'Pense em uma situação em que você não disse o que realmente sentia.',
@@ -30,7 +30,7 @@ export const RITUALS: Ritual[] = [
   {
     day: 3,
     name: 'A Criança Esquecida',
-    objective: 'O momento em que você parou de ser criança.',
+    objective: 'Encontre a criança que ainda espera',
     steps: [
       'Resgate uma memória de infância onde você se sentiu sozinho ou incompreendido.',
       'Imagine-se hoje indo sentar ao lado daquela criança.',
@@ -43,7 +43,7 @@ export const RITUALS: Ritual[] = [
   {
     day: 4,
     name: 'Os Nós Invisíveis',
-    objective: 'Vínculos que ainda drenam sua energia vital.',
+    objective: 'Identifique os vínculos que drenam',
     steps: [
       'Visualize uma pessoa ou situação que gera cansaço imediato ao pensar.',
       'Sinta em qual parte do seu corpo esse "fio" está conectado.',
@@ -56,7 +56,7 @@ export const RITUALS: Ritual[] = [
   {
     day: 5,
     name: 'O Sabotador Interno',
-    objective: 'A parte que destrói quando as coisas estão quase boas.',
+    objective: 'Veja o padrão que destrói o que é bom',
     steps: [
       'Lembre-se de um sucesso recente e do medo que surgiu logo em seguida.',
       'Dê um nome ou imagem para essa voz que diz que "é bom demais pra ser verdade".',
@@ -69,7 +69,7 @@ export const RITUALS: Ritual[] = [
   {
     day: 6,
     name: 'A Máscara',
-    objective: 'Quem você se tornou para ser aceito pelo mundo.',
+    objective: 'Descubra quem você é sem plateia',
     steps: [
       'Vá para frente de um espelho e observe seu rosto em repouso.',
       'Imagine que você está retirando uma camada de gesso que molda seu sorriso ou seriedade.',
@@ -82,7 +82,7 @@ export const RITUALS: Ritual[] = [
   {
     day: 7,
     name: 'O Ouro na Sombra',
-    objective: 'O que você exilou em si mesmo e agora quer voltar.',
+    objective: 'Resgate o que foi exilado em você',
     steps: [
       'Pense em uma característica que você admira muito em outra pessoa, mas acha que não tem.',
       'Imagine essa característica voltando para você como uma luz dourada.',
