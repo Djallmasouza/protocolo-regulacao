@@ -4,10 +4,10 @@ import { Card } from '../ui/Card';
 
 interface JourneyStatusCardProps {
   currentDay: number;
-  integrationPercentage: number;
+  interactionPercentage: number;
 }
 
-export const JourneyStatusCard = ({ currentDay, integrationPercentage }: JourneyStatusCardProps) => (
+export const JourneyStatusCard = ({ currentDay, interactionPercentage }: JourneyStatusCardProps) => (
   <Card variant="primary" className="p-8 relative overflow-hidden group border-none">
     <div className="absolute -right-20 -top-20 w-64 h-64 bg-primary/20 rounded-full blur-[80px]" />
     <div className="relative z-10">
@@ -21,13 +21,13 @@ export const JourneyStatusCard = ({ currentDay, integrationPercentage }: Journey
       
       <div className="w-full space-y-3">
         <div className="flex justify-between items-end">
-          <span className="text-xs font-semibold text-on-primary-container">{integrationPercentage}% de integração</span>
+          <span className="text-xs font-semibold text-on-primary-container">{interactionPercentage}% de interação</span>
           <Sparkles className="w-4 h-4 text-tertiary" />
         </div>
         <div className="h-1.5 w-full bg-on-primary/20 rounded-full overflow-hidden">
           <motion.div 
             initial={{ width: 0 }}
-            animate={{ width: `${integrationPercentage}%` }}
+            animate={{ width: `${interactionPercentage}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="h-full bg-tertiary rounded-full shadow-[0_0_12px_rgba(233,195,73,0.4)]" 
           />

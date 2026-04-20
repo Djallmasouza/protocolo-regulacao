@@ -105,17 +105,8 @@ export default function App() {
 
 const Header = () => (
   <header className="fixed top-0 w-full z-50 bg-background/70 backdrop-blur-2xl border-b border-on-surface/5">
-    <div className="flex justify-between items-center px-6 py-4 max-w-2xl mx-auto">
-      <Menu className="text-primary w-6 h-6" />
+    <div className="flex justify-center items-center px-6 py-4 max-w-2xl mx-auto">
       <h1 className="font-serif text-2xl font-bold text-primary">Protocolo de Regulação</h1>
-      <div className="w-10 h-10 rounded-full overflow-hidden border border-on-surface/10 bg-surface-high">
-        <img 
-          src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200" 
-          alt="Avatar" 
-          className="w-full h-full object-cover"
-          referrerPolicy="no-referrer"
-        />
-      </div>
     </div>
   </header>
 );

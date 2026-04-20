@@ -1,4 +1,5 @@
-import { motion } from 'motion/react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { UserProgress } from '../types';
 import { Settings, History, Bell, Info, Sparkles, LogOut, Shield, ChevronRight } from 'lucide-react';
 import { cn } from '../lib/utils';
@@ -9,11 +10,13 @@ interface ProfileProps {
 }
 
 export default function Profile({ progress, onReset }: ProfileProps) {
+  const [activeItem, setActiveItem] = useState<string | null>(null);
+
   const menuItems = [
-    { title: 'Minha Janela de Tolerância', icon: Shield },
-    { title: 'Histórico de Rituais', icon: History },
-    { title: 'Notificações', icon: Bell },
-    { title: 'Sobre o Método', icon: Info },
+    { title: 'Minha Janela de Tolerância', icon: Shield, content: 'Sua janela de tolerância é o estado em que você consegue processar emoções sem entrar em hiper ou hipo-excitação.' },
+    { title: 'Histórico de Rituais', icon: History, content: `Você já concluiu ${progress.completedRituals.length} rituais. Cada passo é uma vitória na sua jornada de autoconhecimento.` },
+    { title: 'Notificações', icon: Bell, content: 'Suas notificações de rituais diários e lembretes de regulação somática aparecerão aqui.' },
+    { title: 'Sobre o Método', icon: Info, content: 'O Protocolo de Regulação utiliza neurociência e práticas ancestrais para ajudar na interação emocional e segurança somática.' },
   ];
 
   return (
@@ -68,6 +71,7 @@ export default function Profile({ progress, onReset }: ProfileProps) {
           return (
             <button
               key={i}
+              onClick={() => setActiveItem(item.title)}
               className="w-full flex items-center justify-between p-5 bg-surface-low rounded-2xl border border-on-surface/5 hover:bg-surface-high transition-all active:scale-[0.98]"
             >
               <div className="flex items-center gap-4">
@@ -89,6 +93,33 @@ export default function Profile({ progress, onReset }: ProfileProps) {
           <span className="text-sm font-bold uppercase tracking-widest">Reiniciar Jornada</span>
         </button>
       </section>
+
+      <AnimatePresence>
+        {activeItem && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 bg-background/80 backdrop-blur-sm">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="bg-surface-low p-8 rounded-3xl border border-on-surface/10 w-full max-w-sm shadow-2xl"
+            >
+              <h3 className="text-2xl font-serif font-bold mb-4 text-primary">
+                {activeItem}
+              </h3>
+              <div className="text-on-surface-variant">
+                <p>{menuItems.find(i => i.title === activeItem)?.content}</p>
+                <p className="mt-4 text-sm italic opacity-60">Conteúdo em processo de autoconhecimento.</p>
+              </div>
+              <button 
+                onClick={() => setActiveItem(null)}
+                className="mt-8 w-full py-3 bg-primary text-on-primary rounded-xl font-bold uppercase tracking-widest text-xs"
+              >
+                Fechar
+              </button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
       <footer className="text-center px-8">
         <p className="font-serif italic text-tertiary text-lg leading-relaxed opacity-90">

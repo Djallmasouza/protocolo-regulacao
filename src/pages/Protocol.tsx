@@ -24,12 +24,12 @@ export default function Protocol({ onSelectProtocol }: ProtocolProps) {
         </div>
         <h2 className="text-4xl font-bold font-serif tracking-tight mb-8">Estou em Colapso</h2>
 
-        <div className="grid grid-cols-2 gap-4">
-          {EMERGENCY_PROTOCOLS.map((protocol, i) => (
+        <div className="grid grid-cols-1 gap-4">
+          {EMERGENCY_PROTOCOLS.map((protocol) => (
             <ProtocolCard 
               key={protocol.id} 
               protocol={protocol} 
-              isFullWidth={i === 0} 
+              isFullWidth={true} 
               onClick={() => onSelectProtocol(protocol)} 
             />
           ))}
@@ -40,7 +40,7 @@ export default function Protocol({ onSelectProtocol }: ProtocolProps) {
         <h3 className="text-xl font-bold mb-4 font-serif text-primary">O que é a Janela de Tolerância?</h3>
         <p className="text-on-surface-variant leading-relaxed">
           Seu sistema nervoso flutua entre estados de hiper-excitação (luta/fuga) e hipo-excitação (colapso). 
-          Estes protocolos ajudam você a voltar para a "janela" onde a cura acontece.
+          Estes protocolos ajudam você a voltar para a "janela" onde o apoio acontece.
         </p>
       </Card>
     </motion.div>

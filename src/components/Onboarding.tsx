@@ -24,7 +24,7 @@ const slides = [
   },
   {
     title: 'Segurança em Primeiro Lugar',
-    description: 'Use o Protocolo de Emergência sempre que se sentir sobrecarregada. Estamos aqui para garantir que sua cura seja segura e gentil.',
+    description: 'Use o Protocolo de Emergência sempre que se sentir sobrecarregada. Estamos aqui para garantir que seu processo seja seguro e gentil.',
     icon: ShieldCheck,
     color: 'text-secondary',
     bg: 'bg-secondary/10'

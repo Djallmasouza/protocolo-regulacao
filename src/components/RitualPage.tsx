@@ -31,8 +31,8 @@ export default function RitualPage({ ritual, onBack, onComplete }: RitualPagePro
         <h2 className="text-sm uppercase tracking-[0.2em] text-tertiary mb-2 font-serif">Ritual do Dia {ritual.day}</h2>
         <h1 className="text-4xl font-bold font-serif mb-6">{ritual.name}</h1>
         
-        <div className="relative h-64 w-full rounded-3xl overflow-hidden mb-8">
-          <img src={ritual.image} alt={ritual.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+        <div className="relative h-64 w-full rounded-3xl overflow-hidden mb-8 bg-gradient-to-br from-indigo-950 via-purple-900 to-amber-900/40">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_var(--tw-gradient-stops))] from-amber-400/20 via-transparent to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         </div>
 
